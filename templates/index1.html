@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="Itr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../static/style.css" />
+    <title>Placement Status Prediction</title>
+  </head>
+  <body>
+    <center>
+      <h1>Placement Status Prediction</h1>
+      <form action="{{url_for ('predict')}}" method="post">
+        SSC Percentage
+        <input
+          type="text"
+          name="ssc"
+          id="ssc"
+          placeholder="Highschool Percentage"
+        /><br /><br />
+        HSC Percentage
+        <input
+          type="text"
+          name="hsc"
+          id="hsc"
+          placeholder=" Intermediate Percentage"
+        /><br /><br />
+        Degree Percentage
+        <input
+          type="text"
+          name="degree"
+          id="degree"
+          placeholder="Degree Percentage"
+        /><br /><br />
+        Work Experience
+        <input
+          type="text"
+          name="work"
+          id="work"
+          placeholder="Work Experience 0 for No, 1 for Yes"
+        /><br /><br />
+        MBA Percentage
+        <input
+          type="text"
+          name="mba"
+          id="mba"
+          placeholder="MBA Percentage"
+        /><br /><br />
+        <button type="submit">Predict</button>
+      </form>
+      {{ prediction_text }}
+    </center>
+  </body>
+</html>
